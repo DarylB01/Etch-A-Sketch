@@ -5,6 +5,8 @@
     margin-left: auto;
     margin-right: auto;
     text-align: center;
+    border: 3px double rgb(66, 65, 65);
+    border-radius: 5px;
 }
 
 .title h2 {
@@ -35,6 +37,14 @@
     font-family: 'Nunito', sans-serif;
 }
 
+body {
+    background-color: #fff;
+    background-image:
+    linear-gradient(90deg, transparent 79px, #abced4 79px, #abced4 81px, transparent 81px),
+    linear-gradient(#eee .1em, transparent .1em);
+    background-size: 100% 1.2em;
+}
+
 .button:hover {
     transform: scale(1.05);
     -webkit-transition: 0.2s;
@@ -45,12 +55,12 @@
 }
 
 .button:visited {
-    border: 5px solid green;
+    border: 5px solid rgb(40, 77, 40);
 }
 
 .grid {
     display: grid;
-    border: 1px solid black;
+    border: 3px double rgb(36, 33, 33);
     min-width: 400px;
     max-height: 600px;
     max-width: 500px;
@@ -62,22 +72,86 @@
     -webkit-transition: 1.2s;
 }
 
-.gridbox {
-    border : 0.02px solid black;
+.box {
+    border : 0.02px dotted rgb(44, 43, 43);
     padding: 2px;
-    -webkit-transition: 0.09s;
+    -webkit-transition: 0.10s;
 }
 
-.blackbox.gridbox {
-    background-color: r
-    border : 0.02px solid black;
-    padding: 2px;
-    -webkit-transition: 0.09s;
-}
-
-.blackbox {
-    background-color : black;
+.black.box {
+    background-color : rgb(26, 23, 23);
     -webkit-transition: 0.09s;
     padding: 2px;
 }
 
+.red.box {
+    background-color : rgb(90, 30, 30);
+    -webkit-transition: 0.09s;
+    padding: 2px;
+}
+.green.box {
+    background-color : rgb(34, 99, 32);
+    -webkit-transition: 0.09s;
+    padding: 2px;
+}
+.blue.box {
+    background-color : rgb(28, 45, 119);
+    -webkit-transition: 0.09s;
+    padding: 2px;
+}
+.yellow.box {
+    background-color : rgb(235, 226, 102);
+    -webkit-transition: 0.09s;
+    padding: 2px;
+}
+
+.button.setbox:hover {
+
+    background-color:rgb(255, 255, 255);
+    background-image: linear-gradient(rgb(0, 0, 0) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(0, 0, 0) 1px, transparent 1px),
+    linear-gradient(rgba(0, 0, 0, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.3) 1px, transparent 1px);
+    background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+    background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
+    -webkit-transition: 0.2s;
+}
+
+.button.draw:hover {
+    background-color : rgb(51, 50, 50);
+    -webkit-transition: 0.2s;
+}
+.button.erase:hover {
+    color: white;
+    background-color: white;
+    -webkit-transition: 0.2s;
+}
+.button.color:hover {
+    -webkit-animation: color_change .7s infinite alternate;
+	-moz-animation: color_change .7s infinite alternate;
+	-ms-animation: color_change .7s infinite alternate;
+	-o-animation: color_change .7s infinite alternate;
+    animation: color_change .7s infinite alternate;
+    -webkit-transition: 0.5s;
+}
+
+@-webkit-keyframes color_change {
+	from { background-color: blue; }
+	to { background-color: red; }
+}
+@-moz-keyframes color_change {
+	from { background-color: blue; }
+	to { background-color: red; }
+}
+@-ms-keyframes color_change {
+	from { background-color: blue; }
+	to { background-color: red; }
+}
+@-o-keyframes color_change {
+	from { background-color: blue; }
+	to { background-color: red; }
+}
+@keyframes color_change {
+	from { background-color: blue; }
+	to { background-color: red; }
+}
