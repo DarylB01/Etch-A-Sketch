@@ -7,12 +7,12 @@
   margin-right: auto;
   margin-bottom: 100px;
   border-radius: 5px;
+  background-color: white;
   -webkit-transition: 1.2s;
 }
 
 .box {
-  border: 0.0002px dotted rgb(44, 43, 43);
-  padding: 0px;
+  border: 0.0002px solid rgba(0, 0, 0, 0.048);
   -webkit-transition: 0.1s;
 }
 
@@ -36,4 +36,11 @@
 .yellow.box {
   background-color: rgb(231, 219, 48);
   -webkit-transition: 0.09s;
+}
+
+@media only screen and (max-width: 700px) {
+  .grid {
+    width: 95%;
+    height: 40%;
+  }
 }

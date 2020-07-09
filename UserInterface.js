@@ -6,6 +6,7 @@ class UserInterface {
     this.drawBlack = document.querySelector(".button.draw");
     this.erase = document.querySelector(".button.erase");
     this.drawColor = document.querySelector(".button.color");
+    this.body = document.body;
   }
 
   start = () => {
@@ -24,7 +25,13 @@ class UserInterface {
       if (boxes > 100) {
         window.alert("Number is too high! Please try again.");
         return;
+      } else if (boxes === null || boxes === "") {
+        return;
+      } else if (isNaN(boxes)) {
+        window.alert("That is not a valid number");
+        return;
       }
+
       this.etch.removeAllBoxesFromGrid();
       this.etch.setBoxNumber(boxes);
       this.etch.generateBoxes();
@@ -45,6 +52,7 @@ class UserInterface {
       this.etch.turnBoxBlackOnHover();
       this.removeButtonActiveStyles();
       this.setBlackButtonActiveStyle();
+      this.body.style.cursor = "url(icons/pencil.png) 2 28, default";
     });
   };
 
@@ -54,6 +62,7 @@ class UserInterface {
       this.etch.eraseBoxColor();
       this.removeButtonActiveStyles();
       this.setEraserButtonActiveStyle();
+      this.body.style.cursor = "url(icons/eraser.png) 2 28, default";
     });
   };
 
@@ -63,6 +72,7 @@ class UserInterface {
       this.etch.turnBoxRandomColorOnHover();
       this.removeButtonActiveStyles();
       this.setDrawColorButtonActiveStyle();
+      this.body.style.cursor = "url(icons/brush.png) 2 28, default";
     });
   };
 

@@ -47,14 +47,16 @@ class EtchGame {
 
   turnBoxBlackOnHover = () => {
     this.isDrawingBlackPressed = !this.isDrawingBlackPressed;
-    this.grid.addEventListener("mouseover", (e) => {
+    let turnBoxBlack = (e) => {
       if (
         e.target.className.includes("box") &&
         this.isDrawingBlackPressed === true
       ) {
         e.target.className = "box black";
       }
-    });
+    };
+
+    this.grid.addEventListener("mouseover", turnBoxBlack);
   };
 
   turnBoxRandomColorOnHover = () => {
