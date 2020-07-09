@@ -1,0 +1,106 @@
+.buttons {
+  width: 600px;
+  height: 50px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 70px;
+  text-align: center;
+}
+
+.button {
+  max-width: 160px;
+  min-width: 120px;
+  height: 30px;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-bottom: 30px;
+  font-size: 12px;
+  border-radius: 5px;
+  border: 1px solid black;
+  background-color: #f0efef;
+  font-family: "Nunito", sans-serif;
+}
+
+.button:hover {
+  transform: scale(1.05);
+  -webkit-transition: 0.1s;
+}
+
+.button:active {
+  border: 5px solid black;
+}
+
+.button.setgrid:hover {
+  background-color: rgb(255, 255, 255);
+  background-image: linear-gradient(rgb(0, 0, 0) 1px, transparent 1px),
+    linear-gradient(90deg, rgb(0, 0, 0) 1px, transparent 1px),
+    linear-gradient(rgba(0, 0, 0, 0.3) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 0, 0, 0.3) 1px, transparent 1px);
+  background-size: 100px 100px, 100px 100px, 20px 20px, 20px 20px;
+  background-position: -2px -2px, -2px -2px, -1px -1px, -1px -1px;
+  -webkit-transition: 0.2s;
+}
+
+.button.draw:hover,
+.draw.--active {
+  color: white;
+  background-color: rgb(51, 50, 50);
+  -webkit-transition: 0.2s;
+}
+.button.erase:hover,
+.erase.--active {
+  color: white;
+  background-color: white;
+  -webkit-transition: 0.2s;
+}
+.button.color:hover,
+.color.--active {
+  color: white;
+  -webkit-animation: color_change 0.7s infinite alternate;
+  -moz-animation: color_change 0.7s infinite alternate;
+  -ms-animation: color_change 0.7s infinite alternate;
+  -o-animation: color_change 0.7s infinite alternate;
+  animation: color_change 0.7s infinite alternate;
+  -webkit-transition: 0.5s;
+}
+
+@-webkit-keyframes color_change {
+  from {
+    background-color: blue;
+  }
+  to {
+    background-color: red;
+  }
+}
+@-moz-keyframes color_change {
+  from {
+    background-color: blue;
+  }
+  to {
+    background-color: red;
+  }
+}
+@-ms-keyframes color_change {
+  from {
+    background-color: blue;
+  }
+  to {
+    background-color: red;
+  }
+}
+@-o-keyframes color_change {
+  from {
+    background-color: blue;
+  }
+  to {
+    background-color: red;
+  }
+}
+@keyframes color_change {
+  from {
+    background-color: blue;
+  }
+  to {
+    background-color: red;
+  }
+}
