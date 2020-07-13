@@ -1,7 +1,7 @@
 # etch-a-sketch project
 
 ## Introduction
-Fun little to help me practice my DOM manipulation.
+Fun little project that helped me practice my DOM manipulation.
 
 ## URL
 https://daryl-etch-app.netlify.app/
